@@ -40,10 +40,10 @@ for l in range(400):
                             da = requests.get(photo[0],headers=headers())
                             da = da.content
                             md5.update(da)
-                            name = md5.hexdigest()
-                            name = 'photo{}.jpeg'.format(name)
+                            name1 = md5.hexdigest()
+                            name = 'photo{}.jpeg'.format(name1)
                             if name not in files:
-                                with open('/home/photo2/photo{}.jpg'.format(name), 'wb') as f:
+                                with open('/home/photo2/photo{}.jpg'.format(name1), 'wb') as f:
                                     f.write(da)
                             else:
                                 ...
@@ -58,10 +58,10 @@ for l in range(400):
                             da = requests.get(photo_2[0],headers=headers())
                             da = da.content
                             md5.update(da)
-                            name = md5.hexdigest()
-                            name = 'photo{}.jpeg'.format(name)
+                            name1 = md5.hexdigest()
+                            name = 'photo{}.jpeg'.format(name1)
                             if name not in files:
-                                with open('/home/photo2/photo{}.jpg'.format(name), 'wb') as f:
+                                with open('/home/photo2/photo{}.jpg'.format(name1), 'wb') as f:
                                     f.write(da)
                             else:
                                 ...
@@ -76,15 +76,15 @@ for l in range(400):
                             da = requests.get(photo_3[0],headers=headers())
                             da = da.content
                             md5.update(da)
-                            name = md5.hexdigest()
-                            name = 'photo{}.jpeg'.format(name)
+                            name1 = md5.hexdigest()
+                            name = 'photo{}.jpeg'.format(name1)
                             if name not in files:
-                                with open('/home/photo2/photo{}.jpg'.format(name), 'wb') as f:
+                                with open('/home/photo2/photo{}.jpg'.format(name1), 'wb') as f:
                                     f.write(da)
                             else:
                                 ...
                         else:
                             continue
             except Exception as e:
-                logging.debug("这是一条报错信息",e)
+                logging.debug("这是一条报错信息:::{}".format(e))
 
